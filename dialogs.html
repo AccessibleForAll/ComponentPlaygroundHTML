@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./dialogs.js" defer></script>
+  <title>Accessible Component Playground - Dialogs</title>
+</head>
+<body>
+  <main>  
+    <h1>Dialogs</h1>
+    <section>
+      <h2>Dialog without new HTML dialog element</h2>
+      <button type="button" id="openModal">Open Modal</button>
+    </section>
+
+    <section>
+      <h2>Dialog with new HTML dialog element</h2>
+      <button id="openDialogBtn">Open dialog</button>
+      <dialog id="dialog">
+        <h2>This is a heading</h2>
+        <p>This is some placeholder text within the dialog.</p>
+        <button type="button" id="cancelDialogBtn">Cancel</button>
+      </dialog>
+    </section>
+</main>
+
+<!-- This modal dialog sits outside of the main content so that the inert property can be applied when opened-->
+<div class="modalBackground hidden"></div>
+<div role="dialog" id="modal" aria-labelledby="modal_heading" class="hidden" tabindex="-1">
+  <h2 id="modal_heading">This is a heading</h2>
+  <p>This is some placeholder text within the modal.</p>
+  <button type="button" id="cancelModalBtn">Cancel</button>
+</div>
+</body>
+</html>

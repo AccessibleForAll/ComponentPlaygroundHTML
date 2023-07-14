@@ -3,3 +3,47 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+/* Dialogs page */
+
+/* Dialog 1 - without dialog element*/
+[role="dialog"] {
+  position: absolute;
+  padding: 15px;
+  border: 1px solid #000;
+  background-color: #fff;
+  min-width: 300px;
+  top: 50vh;
+  left: 50vw; 
+  transform: translateX(-50%) translateY(-50%); 
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 12%), 0 15px 12px rgb(0 0 0 / 22%);
+  }
+
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0 0 0 / 70%);
+}
+
+/* Dialog 2 - with new dialog element*/
+dialog::backdrop {
+  background: rgb(0 0 0 / 70%);
+}
+
+dialog {
+  border: 1px solid #000;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 12%), 0 15px 12px rgb(0 0 0 / 22%);
+}
