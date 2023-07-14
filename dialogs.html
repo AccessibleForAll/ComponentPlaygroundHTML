@@ -23,8 +23,8 @@
     <section>
       <h2>Dialog with new HTML dialog element</h2>
       <button id="openDialogBtn">Open dialog</button>
-      <dialog id="dialog">
-        <h2>This is a heading</h2>
+      <dialog id="dialog" aria-labelledby="dialog-heading">
+        <h2 id="dialog-heading">This is a heading</h2>
         <p>This is some placeholder text within the dialog.</p>
         <button type="button" id="cancelDialogBtn">Cancel</button>
       </dialog>
